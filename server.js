@@ -16,6 +16,10 @@ function compile(str, path) {
     return stylus(str).set('filename', path);
 }
 
+//configure view engines
+app.set('views', __dirname + '/server/views');
+app.set('view engine', 'jade');
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(stylus.middleware({
@@ -38,11 +42,6 @@ db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function(){
     console.log('meanvision database opened');
 });
-
-
-//configure view engines
-app.set('views', __dirname + '/server/views');
-app.set('view engine', 'jade');
 
 app.get('/partials/:partialPath', function(req, res) {
     res.render('partials/' + req.params.partialPath);
