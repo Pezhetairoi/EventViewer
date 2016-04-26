@@ -1,0 +1,35 @@
+body {
+  padding-top: 69px;
+}
+.navbar-header a.navbar-brand {
+  margin-top: -15px;
+  margin-bottom: -20px;
+}
+h6 {
+  color: #cd2a19;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  border-top: 1px solid #dff0d8;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 15px;
+}
+.toast-top-right {
+  top: 70px;
+}
+.toast-success {
+  background-color: #f86f20;
+}
+.margin-left-med {
+  margin-left: 10px;
+}
+.padding-top-med {
+  padding-top: 10px;
+}
