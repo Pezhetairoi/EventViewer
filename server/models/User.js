@@ -32,7 +32,7 @@ function createDefaultUsers() {
             var salt, hash;
             salt = encryption.createSalt();
             hash = encryption.hashPwd(salt, 'sijie');
-            User.create({firstName: 'Sijie', lastName: 'Hao', username: 'sijiehao', salt: salt, hashed_password: hash, roles: ['admin'] });
+            User.create({firstName: 'Sijie', lastName: 'Hao', username: 'sijiepelta@gmail.com', salt: salt, hashed_password: hash, roles: ['admin'] });
             salt = encryption.createSalt();
             hash = encryption.hashPwd(salt, 'susan');
             User.create({firstName: 'Can', lastName: 'Xue', username: 'susanxue', salt: salt, hashed_password: hash, roles: [] });

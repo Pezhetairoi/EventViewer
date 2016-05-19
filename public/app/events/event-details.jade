@@ -1,0 +1,28 @@
+.container-fluid
+    .well.col-md-6.col-md-offset-3.text-center
+        .row
+            .pull-right.margin-top-med
+                .btn.btn-success
+                    a(href="/events/{{event._id}}/update") Edit
+                    .glyphicon.glyphicon-pencil.padding-left-med
+            .span11
+                h2 {{event.title}}
+        .row
+            div
+                strong Date:
+                section {{event.date | date}}
+            div
+                strong Duration:
+                section {{event.duration}}
+            .span4
+                address
+                    strong Address:
+                    section {{event.address}}
+                    section {{event.city}}, {{event.state}}
+            div
+                strong Description:
+                section {{event.desc}}
+
+
+
+

@@ -1,0 +1,37 @@
+.container
+   h1 Create New Event
+   hr
+   form.form-horizontal(name="newEventForm")
+      fieldset
+         .form-group
+            label.col-md-2.control-label(for="title") Event Title
+            .col-md-8
+               input.form-control(name='title', type='text', placeholder='Event Title', ng-model='title', required)
+         .form-group
+            label.col-md-2.control-label(for="desc") Description
+            .col-md-8
+               input.form-control(name='desc', type='text', placeholder='Description', ng-model='desc', required)
+         .form-group
+            label.col-md-2.control-label(for="date") Event Date
+            .col-md-8
+               input.form-control(name='date', type='text' placeholder="mm/dd/yyyy", ng-model='date', ng-pattern="/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/i",  required)
+         .form-group
+            label.col-md-2.control-label(for="time") Event Time
+            .col-md-8
+               input.form-control(name='time', type='text', placeholder='Event Time', ng-model='duration', required)
+         .form-group
+            label.col-md-2.control-label(for="address") Event Location
+            .col-md-8
+               input.form-control(name='address', type='text', placeholder='Event Location', ng-model='address', required)
+         .form-group
+            label.col-md-2
+            .col-md-4
+               input.form-control(type='text', placeholder='City/Region', ng-model='city', required)
+            .col-md-4
+               input.form-control(type='text', placeholder='State', ng-model='state', required)
+
+      .form-group
+         .col-md-8.col-md-offset-2
+            .pull-right
+               button.btn.btn-primary(ng-click='createEvent()', ng-disabled='newEventForm.$invalid') Create Event &nbsp;
+               button.btn.btn-default(href='/') Cancel

@@ -1,0 +1,14 @@
+.container(ng-controller="mvTmpCtrl")
+   .pull-right
+      form.form-inline
+         .btn-group
+            .btn.btn-default(ng-class="{'active': isActive}" ng-click="toggleTemplate('/partials/events/eventTemplates/tmp1')")
+               i.glyphicon.glyphicon-list
+            .btn.btn-default(ng-class="{'active': !isActive}" ng-click="toggleTemplate('/partials/events/eventTemplates/tmp2')")
+               i.glyphicon.glyphicon-th
+         .form-group.margin-left-med
+            input.form-control(ng-model="searchText", placeholder="Filter")
+         .form-group
+            select.form-control(ng-model="sortOrder", ng-options="item.value as item.text for item in sortOptions")
+
+   div(ng-include="currentTemplate")

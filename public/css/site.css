@@ -2,7 +2,6 @@ body {
   padding-top: 69px;
 }
 .navbar-header a.navbar-brand {
-  margin-top: -15px;
   margin-bottom: -20px;
 }
 h6 {
@@ -16,9 +15,11 @@ footer p {
   border-top: 1px solid #dff0d8;
 }
 .navbar-form .form-group {
+  margin-top: 5px;
   margin-left: 10px;
 }
 .navbar-form button {
+  margin-top: 3px;
   margin-left: 15px;
 }
 .toast-top-right {
@@ -28,8 +29,33 @@ footer p {
   background-color: #f86f20;
 }
 .margin-left-med {
-  margin-left: 10px;
+  margin-left: 20px;
+}
+.margin-top-med {
+  margin-top: 20px;
 }
 .padding-top-med {
   padding-top: 10px;
+}
+.padding-left-med {
+  padding-left: 10px;
+}
+.hoverwell:hover {
+  background-color: #797d7e;
+  cursor: pointer;
+}
+.hoverwell .span1 {
+  color: #030303;
+  font-size: 17px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.form-group .pull-right button {
+  margin-left: 10px;
+}
+.pull-right form .btn-group .btn.active {
+  color: #8c8c8c;
+}
+.well .row section {
+  padding-top: 5px;
 }

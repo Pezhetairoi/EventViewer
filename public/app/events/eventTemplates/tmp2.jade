@@ -1,0 +1,21 @@
+.container
+   h1 All Events
+   hr
+   div.col-md-4(ng-repeat="event in events | filter:searchText | orderBy:sortOrder")
+      a(href="/events/{{event._id}}")
+
+         .well.hoverwell
+            .row-fluid
+               h4.span6.col-md-offset-1 {{event.title}}
+            .row
+               .span1.col-md-offset-1 Date
+               span.col-md-offset-1 {{event.date | date}}
+            .row
+               .span1.col-md-offset-1 Time
+               span.col-md-offset-1 {{event.duration}}
+            .row
+               .span1.col-md-offset-1 Location
+               span.col-md-offset-1 {{event.address}}
+            .row
+               span.col-md-offset-1 {{event.city}}, {{event.state}}
+

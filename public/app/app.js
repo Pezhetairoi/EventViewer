@@ -26,6 +26,11 @@ app.config(function($routeProvider, $locationProvider){
             controller: 'mvUserListCtrl',
             resolve: routeRoleChecks.admin
         })
+        .when('/newEvent', {
+            templateUrl: '/partials/admin/new-event',
+            controller: 'mvNewEventCtrl',
+            resolve: routeRoleChecks.admin
+        })
         //sign-up route
         .when('/signup', {
             templateUrl: '/partials/account/signup',
@@ -37,15 +42,20 @@ app.config(function($routeProvider, $locationProvider){
             controller: 'mvProfileCtrl',
             resolve: routeRoleChecks.user
         })
-        //courses route
-        .when('/courses', {
-            templateUrl: '/partials/courses/course-list',
-            controller: 'mvCourseListCtrl'
+        //events route
+        .when('/events', {
+            templateUrl: '/partials/events/event-list',
+            controller: 'mvEventListCtrl'
         })
-        //courses detail route
-        .when('/courses/:id', {
-            templateUrl: '/partials/courses/course-details',
-            controller: 'mvCourseDetailsCtrl'
+        //events detail route
+        .when('/events/:id', {
+            templateUrl: '/partials/events/event-details',
+            controller: 'mvEventDetailsCtrl'
+        })
+        //update event route
+        .when('/events/:id/update', {
+            templateUrl: '/partials/admin/event-update',
+            controller: 'mvUpdateEventCtrl'
         })
 });
 

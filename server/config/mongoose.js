@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var userModel = require('../models/User.js');
-var courseModel = require('../models/Course.js');
+var eventModel = require('../models/Event.js');
 
 module.exports = function(config) {
     //connect to mongodb
@@ -9,10 +9,10 @@ module.exports = function(config) {
     var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error'));
     db.once('open', function(){
-        console.log('meanvision database opened');
+        console.log('eventreg database opened');
     });
 
     userModel.createDefaultUsers();
-    courseModel.createDefaultCourses();
+    eventModel.createDefaultCourses();
  };
 

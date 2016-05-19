@@ -25,7 +25,7 @@ app.factory('mvAuth', function($http, $q, mvIdentity, mvUser) {
                 deferred.resolve();
             }, function(response) {
                 deferred.reject(response.data.reason);
-            });psychiatrist
+            });
 
             return deferred.promise;
         },

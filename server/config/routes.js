@@ -1,6 +1,6 @@
 var auth = require('./auth.js');
 var users = require('../controllers/users.js');
-var courses = require('../controllers/courses.js');
+var events = require('../controllers/events.js');
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
@@ -14,11 +14,18 @@ module.exports = function(app) {
     //update current user route
     app.put('/api/users', users.updateUser);
 
-    //return course-list
-    app.get('/api/courses', courses.getCourses);
+    //return event-list
+    app.get('/api/events', events.getEvents);
 
-    //return course-details
-    app.get('/api/courses/:id', courses.getCourseById);
+    //create new event
+    app.post('/api/events', events.createEvent);
+
+    //return event-details
+    app.get('/api/events/:id', events.getEventById);
+
+    //update event
+    app.put('/api/events/:id', events.updateCurrentEvent);
+
 
     app.get('/partials/*', function(req, res) {
         res.render('../../public/app/' + req.params[0]);
